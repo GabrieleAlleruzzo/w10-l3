@@ -4,34 +4,52 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { Col, Row } from "react-bootstrap";
 import "../CustomComponents/CustomStyle.css";
+import { Link, useNavigate } from "react-router-dom";
 
 function CustomHeader() {
+  // const useNavigate = useNavigate()  //ritorna se stesso :O
+
   return (
     <Navbar expand="lg" className="bg-black mb-5 justify-content-center">
       <Container className=" m-0">
         <Navbar.Brand>
-          <img
-            style={{ width: "100px" }}
-            src="./public\netflix_logo.png"
-            alt=""
-          />
+          <Link to="/">
+            <img
+              style={{ width: "100px" }}
+              src="./public\netflix_logo.png"
+              alt=""
+            />
+          </Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav ">
           <Nav className="me-auto">
-            <Nav.Link className="text-white " href="/">
+            <Link
+              className="p-2 Nav-Link text-white fw-normal text-decoration-none"
+              to="/"
+            >
               Home
-            </Nav.Link>
-            <Nav.Link className="text-white " href="/Star-wars">
+            </Link>
+            <Link
+              className="p-2 Nav-Link text-white fw-normal text-decoration-none"
+              to="/Star-wars"
+            >
               Star Wars
-            </Nav.Link>
-            <Nav.Link className="text-white " href="/Lord-of-the-rings">
+            </Link>
+            <Link
+              className="p-2 Nav-Link text-white fw-normal text-decoration-none"
+              to="/Lord-of-the-rings"
+            >
               LoTR
-            </Nav.Link>
-            <Nav.Link className="text-white " href="/Shit">
+            </Link>
+            <Link
+              className="p-2 Nav-Link text-white fw-normal text-decoration-none"
+              to="/Shit"
+            >
               Curse Words
-            </Nav.Link>
-            <Nav.Link className="text-white" href="#link">
+            </Link>
+
+            <Nav.Link className="text-white" href="/">
               TvShows
             </Nav.Link>
             <Nav.Link className="text-white" href="#link">
