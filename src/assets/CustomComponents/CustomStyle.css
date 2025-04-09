@@ -1,0 +1,10 @@
+#cards {
+  width: 150px;
+  height: auto;
+}
+
+@media (max-width: 992px) {
+  #hide {
+    display: none;
+  }
+}
